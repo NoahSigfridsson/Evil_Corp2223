@@ -1,1 +1,20 @@
 /Bygg sidan här. Efterlikna filen contacts.html
+
+.wrapper 
+        header 
+            h1 Evil Corp
+        main 
+
+            - @data.each do |person|
+                article.usercard
+                    .profile-img 
+                        img alt="#{person['name']}" src="img/#{person['img_src']}.jpg"
+
+                    .info  
+                        label.name = person["name"]
+                        label.mail = person["mail"]
+                        label.tel = person["phone"]
+                        label.department = person["department"]
+                        
+
+
